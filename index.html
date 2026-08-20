@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>yang</title>
+  <meta name="theme-color" content="#FCFBF7">
+  <meta name="description" content="making tiny games and tools">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='6' fill='%23D6187E'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #FCFBF7;
+      --text: #22223B;
+      --secondary: #0056A8;
+      --muted: #8D8DA6;
+      --accent: #D6187E;
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    a { color: inherit; }
+
+    /* Hero (home) */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+    }
+    .hero-content {
+      max-width: 480px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+    }
+
+    .name {
+      font-family: 'Young Serif', serif;
+      font-size: clamp(3rem, 10vw, 3.5rem);
+      font-weight: 400;
+      line-height: 1;
+      margin-bottom: 1.5rem;
+      opacity: 0;
+      animation: fade 0.5s ease 0.1s forwards;
+    }
+
+    .bio {
+      font-size: 1rem;
+      line-height: 1.75;
+      max-width: 400px;
+      opacity: 0;
+      animation: fade 0.5s ease 0.2s forwards;
+    }
+
+    .links {
+      margin-top: 1.5rem;
+      font-size: 0.75rem;
+      color: var(--muted);
+      letter-spacing: 0.06em;
+      display: flex;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+      opacity: 0;
+      animation: fade 0.5s ease 0.3s forwards;
+    }
+
+    .links a {
+      color: var(--secondary);
+      text-decoration: none;
+      transition: color 0.25s;
+    }
+
+    .links a:hover { color: var(--accent); }
+
+    @keyframes fade {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <div class="hero-content">
+      <h1 class="name">yang</h1>
+      <p class="bio">making tiny games and tools</p>
+      <div class="links">
+        <a href="https://github.com/mnmlyw" target="_blank" rel="noopener">github</a>
+        <a href="https://mnmlyw.itch.io" target="_blank" rel="noopener">itch.io</a>
+        <a href="https://bsky.app/profile/mnmlyw.bsky.social" target="_blank" rel="noopener">bluesky</a>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
